@@ -28,8 +28,10 @@ describe("Tests for the functions in helper.js", function () {
 		document.getElementById("paymentTable").children[1].innerHTML = "";
 		billAmtInput.value = "";
 		tipAmtInput.value = "";
-		for (let item in allPayments) {
-			delete allPayments[item];
-		}
+		allPayments = {};
+		summaryTds[0].innerHTML = "";
+		summaryTds[1].innerHTML = "";
+		summaryTds[2].innerHTML = "";
+		// serverId = 0;
 	});
 });

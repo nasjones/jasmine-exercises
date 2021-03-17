@@ -22,9 +22,8 @@ describe("Servers test (with setup and tear-down)", function () {
 	afterEach(function () {
 		serverNameInput.value = "";
 		serverTbody.innerHTML = "";
-
-		for (let item in allServers) {
-			delete allServers[item];
-		}
+		allServers = {};
+		paymentId = 0;
+		serverId = 0;
 	});
 });

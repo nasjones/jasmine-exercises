@@ -1,3 +1,4 @@
+// let paymentId = 0;
 describe("Tests for the functions in payments.js", function () {
 	beforeEach(function () {
 		billAmtInput.value = 200;
@@ -44,11 +45,10 @@ describe("Tests for the functions in payments.js", function () {
 		document.getElementById("paymentTable").children[1].innerHTML = "";
 		billAmtInput.value = "";
 		tipAmtInput.value = "";
-		for (let item in allPayments) {
-			delete allPayments[item];
-		}
+		allPayments = {};
 		summaryTds[0].innerHTML = "";
 		summaryTds[1].innerHTML = "";
 		summaryTds[2].innerHTML = "";
+		paymentId = 0;
 	});
 });
