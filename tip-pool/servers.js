@@ -44,16 +44,3 @@ function updateServerTable() {
 		serverTbody.append(newTr);
 	}
 }
-
-function appendDeleteBtn(tr) {
-	let newTd = document.createElement("td");
-	newTd.innerText = "X";
-	newTd.addEventListener("click", (e) => {
-		console.log(allServers);
-		let server = e.currentTarget.parentElement.getAttribute("id");
-		delete allServers[server];
-		e.currentTarget.parentElement.remove();
-		updateServerTable();
-	});
-	tr.append(newTd);
-}

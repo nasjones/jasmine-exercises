@@ -24,14 +24,19 @@ describe("Tests for the functions in helper.js", function () {
 		expect(sumPaymentTotal("tipPercent")).toEqual(20);
 	});
 
+	it("tests new deleteButton function", function () {
+		submitPaymentInfo();
+		expect(paymentTbody.children[0].children[3].innerText).toEqual("X");
+	});
+
 	afterEach(function () {
 		document.getElementById("paymentTable").children[1].innerHTML = "";
 		billAmtInput.value = "";
 		tipAmtInput.value = "";
 		allPayments = {};
+		paymentId = 0;
 		summaryTds[0].innerHTML = "";
 		summaryTds[1].innerHTML = "";
 		summaryTds[2].innerHTML = "";
-		// serverId = 0;
 	});
 });
